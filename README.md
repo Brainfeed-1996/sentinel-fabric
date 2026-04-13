@@ -8,7 +8,7 @@ Sentinel Fabric is a security control plane that unifies asset inventory, attack
 
 Security teams often drown in fragmented tooling, partial visibility, and noisy findings. Sentinel Fabric is designed to reduce that fragmentation by combining visibility, graph-based reasoning, policy analysis, and operator workflows in a single extensible system.
 
-This is the kind of project that demonstrates deep engineering across:
+This project is meant to demonstrate deep engineering across:
 
 - cybersecurity
 - backend systems
@@ -17,6 +17,22 @@ This is the kind of project that demonstrates deep engineering across:
 - developer platform design
 - observability
 - product architecture
+
+## Current status
+
+Early flagship build phase with:
+
+- initial control-plane API
+- first SDK primitives
+- operator console mock
+- ADRs and architecture docs
+- CI and contribution templates
+
+## Architecture at a glance
+
+```text
+connectors and scanners -> ingestion workers -> findings and asset model -> policy and graph reasoning -> remediation workflows -> operator console
+```
 
 ## Core capabilities
 
@@ -29,32 +45,7 @@ This is the kind of project that demonstrates deep engineering across:
 - evidence collection and audit trails
 - plugin SDK for scanners and enrichers
 
-## Proposed architecture
-
-### Control plane
-
-- API gateway
-- authn and authz service
-- tenant and organization management
-- policy evaluation service
-- workflow orchestration service
-
-### Data plane
-
-- asset ingestion workers
-- scanner workers
-- correlation engine
-- graph builder
-- enrichment pipelines
-
-### Storage
-
-- Postgres for transactional data
-- object storage for raw artifacts
-- graph store or graph projection layer for relationship queries
-- ClickHouse or OpenSearch for events and findings analytics
-
-## Monorepo structure
+## Repository structure
 
 ```text
 sentinel-fabric/
@@ -66,49 +57,40 @@ sentinel-fabric/
     sdk/
     policy-engine/
     graph-core/
-    ui-kit/
   docs/
-  deployments/
-  examples/
-  scripts/
 ```
 
-## Project status
+## Demo surfaces
 
-Planning and architecture phase.
-
-## Roadmap
-
-### Phase 1
-
-- monorepo bootstrap
-- core domain model
-- asset inventory MVP
-- secrets scanner MVP
-- findings API
-- initial web dashboard
-
-### Phase 2
-
-- graph-based attack path modeling
-- policy DSL
-- workflow engine integration
-- multi-tenant access control
-- observability stack
-
-### Phase 3
-
-- plugin marketplace model
-- automated remediation actions
-- benchmark datasets
-- enterprise deployment story
+- API health and overview endpoints under `apps/api`
+- static operator console mock under `apps/web/index.html`
 
 ## Documentation
 
 - docs/architecture.md
 - docs/threat-model.md
 - docs/design-decisions.md
+- docs/adr-001-control-plane-monorepo.md
+- docs/adr-002-asset-finding-model.md
+- docs/operator-workflows.md
+- docs/api.md
 - docs/roadmap.md
+
+## Roadmap
+
+### Near term
+
+- connect the UI to live API data
+- add richer domain models and persistence
+- implement policy evaluation skeleton
+- expand scanner and enricher SDK contracts
+
+### Mid term
+
+- graph-based attack path modeling
+- multi-tenant access control
+- workflow-based remediation lifecycle
+- benchmarks and sample datasets
 
 ## Security
 

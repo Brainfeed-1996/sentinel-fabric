@@ -19,17 +19,18 @@
     <header>
       <h1>Sentinel Fabric</h1>
       <p class="muted">Security operations and exposure management control plane</p>
+      <p class="muted" data-status>Attempting to connect to local API.</p>
     </header>
     <main>
       <section class="card">
         <h2>Overview</h2>
-        <p>Total assets: <strong>2</strong></p>
-        <p>Total findings: <strong>2</strong></p>
+        <p>Total assets: <strong data-total-assets>2</strong></p>
+        <p>Total findings: <strong data-total-findings>2</strong></p>
       </section>
       <section class="card">
         <h2>Severity snapshot</h2>
-        <p class="critical">Critical: 1</p>
-        <p class="high">High: 1</p>
+        <p class="critical">Critical: <span data-critical>1</span></p>
+        <p class="high">High: <span data-high>1</span></p>
       </section>
       <section class="card">
         <h2>Active findings</h2>
@@ -47,5 +48,6 @@
         </ul>
       </section>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
