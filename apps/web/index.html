@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinel Fabric Console</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; background: #0b1020; color: #e8ecf3; }
+      header { padding: 24px; border-bottom: 1px solid #24304d; }
+      main { padding: 24px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+      .card { background: #141c33; border: 1px solid #24304d; border-radius: 14px; padding: 18px; }
+      .muted { color: #9fb0d0; }
+      .critical { color: #ff6b6b; }
+      .high { color: #ffd166; }
+      ul { padding-left: 18px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sentinel Fabric</h1>
+      <p class="muted">Security operations and exposure management control plane</p>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Overview</h2>
+        <p>Total assets: <strong>2</strong></p>
+        <p>Total findings: <strong>2</strong></p>
+      </section>
+      <section class="card">
+        <h2>Severity snapshot</h2>
+        <p class="critical">Critical: 1</p>
+        <p class="high">High: 1</p>
+      </section>
+      <section class="card">
+        <h2>Active findings</h2>
+        <ul>
+          <li>Exposed credential in repository history</li>
+          <li>Public object storage bucket without policy restriction</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Operator focus</h2>
+        <ul>
+          <li>Triage critical exposure</li>
+          <li>Assign remediation owner</li>
+          <li>Track verification workflow</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
