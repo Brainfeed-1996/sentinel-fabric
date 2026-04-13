@@ -1,5 +1,7 @@
 # Sentinel Fabric
 
+![CI](https://github.com/Brainfeed-1996/sentinel-fabric/actions/workflows/ci.yml/badge.svg)
+
 Security operations and exposure management platform for modern engineering teams.
 
 Sentinel Fabric is a security control plane that unifies asset inventory, attack surface mapping, secret exposure scanning, misconfiguration analysis, risk scoring, and remediation workflows into one opinionated platform.
@@ -24,14 +26,30 @@ Early flagship build phase with:
 
 - initial control-plane API
 - first SDK primitives
-- operator console mock
+- operator console mock connected to local API
 - ADRs and architecture docs
 - CI and contribution templates
 
 ## Architecture at a glance
 
 ```text
-connectors and scanners -> ingestion workers -> findings and asset model -> policy and graph reasoning -> remediation workflows -> operator console
+connectors and scanners
+        |
+        v
+ ingestion workers
+        |
+        v
+ assets, findings, evidence
+        |
+        +--> policy evaluation
+        |
+        +--> graph reasoning
+        |
+        v
+ remediation workflows
+        |
+        v
+ operator console
 ```
 
 ## Core capabilities
@@ -80,7 +98,7 @@ sentinel-fabric/
 
 ### Near term
 
-- connect the UI to live API data
+- connect the UI to richer live API data
 - add richer domain models and persistence
 - implement policy evaluation skeleton
 - expand scanner and enricher SDK contracts
