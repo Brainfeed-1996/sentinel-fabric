@@ -1,0 +1,15 @@
+{
+  "name": "sentinel-fabric",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Security operations and exposure management control plane",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "echo build placeholders",
+    "test": "echo test placeholders",
+    "lint": "echo lint placeholders"
+  }
+}
