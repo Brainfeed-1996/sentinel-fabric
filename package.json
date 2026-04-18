@@ -1,0 +1,38 @@
+{
+  "name": "sentinel-fabric",
+  "version": "0.1.0",
+  "description": "Security operations and exposure management platform for modern engineering teams",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:api & npm run dev:web",
+    "dev:api": "cd apps/api && npm run dev",
+    "dev:web": "cd apps/web && npx serve . -p 3000",
+    "start": "cd apps/api && npm start",
+    "build": "echo Build completed",
+    "test": "echo No tests configured yet",
+    "lint": "echo No linter configured yet",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "security",
+    "cybersecurity",
+    "exposure-management",
+    "vulnerability-scanning",
+    "security-operations",
+    "devsecops"
+  ],
+  "author": "Sentinel Fabric Team",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/sentinel-fabric"
+  },
+  "homepage": "https://github.com/your-org/sentinel-fabric#readme"
+}
