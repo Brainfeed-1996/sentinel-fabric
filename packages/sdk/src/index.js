@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Sentinel Fabric SDK
  * A comprehensive SDK for building security scanners, enrichers, and integrations
@@ -409,3 +410,18 @@ export default {
   APIClient,
   createSDK
 };
+=======
+export function defineScanner(scanner) {
+  return {
+    kind: 'scanner',
+    ...scanner
+  };
+}
+
+export function defineEnricher(enricher) {
+  return {
+    kind: 'enricher',
+    ...enricher
+  };
+}
+>>>>>>> 61f72d4d35c736024bd7fe5d25eadd5d9ffb188f

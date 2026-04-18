@@ -8,7 +8,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Security-Operations-ff6b6b?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Exposure-Management-4ecdc4?style=for-the-badge" />
-  <img src="img.shields.io/badge/Control-Plane-45b7d1?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Control-Plane-45b7d1?style=for-the-badge" />
 </p>
 
 ---
@@ -78,7 +78,7 @@ Security teams often drown in fragmented tooling, partial visibility, and noisy 
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/sentinel-fabric.git
+git clone https://github.com/Brainfeed-1996/sentinel-fabric.git
 cd sentinel-fabric
 
 # Install dependencies
@@ -89,13 +89,6 @@ cd apps/api && npm run dev
 
 # In another terminal, serve the UI
 cd apps/web && npx serve .
-```
-
-### Docker Support
-
-```bash
-# Using Docker Compose
-docker-compose up -d
 ```
 
 The API will be available at `http://localhost:8080` and the UI at `http://localhost:3000`.

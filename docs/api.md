@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sentinel Fabric API Reference
 
 ## Base URL
@@ -500,3 +501,20 @@ All errors follow this format:
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Internal Server Error |
+=======
+# API Outline
+
+## Endpoints
+
+### GET /health
+Service health check.
+
+### GET /api/v1/assets
+Returns known assets.
+
+### GET /api/v1/findings
+Returns current findings.
+
+### GET /api/v1/overview
+Returns aggregate counts for dashboard and summary views.
+>>>>>>> 61f72d4d35c736024bd7fe5d25eadd5d9ffb188f
